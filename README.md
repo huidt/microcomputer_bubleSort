@@ -40,7 +40,7 @@
 
 ## 1.3. 原理框图及说明
 
-![](https://ythdong.gitee.io/blog_image/%E4%B8%93%E4%B8%9A%E8%AF%BE/%E5%8D%95%E7%89%87%E6%9C%BA1.png)
+![](img/%E5%8D%95%E7%89%87%E6%9C%BA1.png)
 
 1. 电源部分：由于没有硬件实物只进行了仿真，所以电源电路在Proteus中并未画出，实物应是5V的电源电路；
 2. 数字按键：10个数字按键提供给用户作为数据输入源使用；
@@ -56,29 +56,29 @@
 
 复位电路如下图，由C3和R1构成。由于51单片机为低电平复位，图示电路利用电容的特性，在刚刚外加5V电源时RST脚的电压为低。时间常数=RC=38mS，满足芯片复位要求。由于电压为5V，可选择耐压的电容即可。
 
-![](https://ythdong.gitee.io/blog_image/%E4%B8%93%E4%B8%9A%E8%AF%BE/%E5%8D%95%E7%89%87%E6%9C%BA2.png)
+![](img/%E5%8D%95%E7%89%87%E6%9C%BA2.png)
 
 ## 1.6. 液晶电路
 
-![](https://ythdong.gitee.io/blog_image/%E4%B8%93%E4%B8%9A%E8%AF%BE/%E5%8D%95%E7%89%87%E6%9C%BA3.png)
+![](img/%E5%8D%95%E7%89%87%E6%9C%BA3.png)
 
 ## 1.7. 按键电路
 
-![](https://ythdong.gitee.io/blog_image/%E4%B8%93%E4%B8%9A%E8%AF%BE/%E5%8D%95%E7%89%87%E6%9C%BA4.png)
+![](img/%E5%8D%95%E7%89%87%E6%9C%BA4.png)
 
 ## 1.8. 输出监测电路
 
-![](https://ythdong.gitee.io/blog_image/%E4%B8%93%E4%B8%9A%E8%AF%BE/%E5%8D%95%E7%89%87%E6%9C%BA5.png)
+![](img/%E5%8D%95%E7%89%87%E6%9C%BA5.png)
 
 这里的按键输入检测主要是为了让液晶及时地实时地显示用户输入的数据，因为所有的按键都是接地的，一旦被按下则电平为0，并且按键检测电路使用了反相器 + 二极管串联的方法，在代码中一开始我就将P1^7口初始化为0，这样当数字按键被按下时低电平经过反相器变成高电平通过二极管到达P1^7口为1则标志着用户已经开始输入了，此时液晶要显示数据。
 
 ## 1.9. 总电路
 
-![](https://ythdong.gitee.io/blog_image/%E4%B8%93%E4%B8%9A%E8%AF%BE/%E5%8D%95%E7%89%87%E6%9C%BA6.png)
+![](img/%E5%8D%95%E7%89%87%E6%9C%BA6.png)
 
 ## 1.10. 软件设计思路及主流程图
 
-![](https://ythdong.gitee.io/blog_image/%E4%B8%93%E4%B8%9A%E8%AF%BE/%E5%8D%95%E7%89%87%E6%9C%BA7.png)
+![](img/%E5%8D%95%E7%89%87%E6%9C%BA7.png)
 
 # 2. 电子密码锁
 
@@ -99,17 +99,17 @@
 
 ### 2.2.2. 原理图
 
-![](https://img-blog.csdnimg.cn/20190515085829352.png)
+![](img/%E5%8D%95%E7%89%87%E6%9C%BA9.png)
 
-![](https://img-blog.csdnimg.cn/20190515085841176.png)
+![](img/%E5%8D%95%E7%89%87%E6%9C%BA10.png)
 
-![](https://img-blog.csdnimg.cn/20190515085850850.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyODQyNzg2,size_16,color_FFFFFF,t_70)
+![](img/%E5%8D%95%E7%89%87%E6%9C%BA11.png)
 
 ### 2.2.3. 运行效果图
 
 如下提示输入密码
 
-![](https://img-blog.csdnimg.cn/20190515085918705.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyODQyNzg2,size_16,color_FFFFFF,t_70)
+![](img/%E5%8D%95%E7%89%87%E6%9C%BA12.png)
 
 ## 2.3. 操作注意
 
